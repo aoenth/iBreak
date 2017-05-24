@@ -14,45 +14,61 @@ var isPlaying = false
 
 
 class FirstViewController: UIViewController, AVAudioPlayerDelegate {
-  
-  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    if isPlaying {
-      player?.pause()
-      isPlaying = false
-    } else {
-      player?.play()
-      isPlaying = true
+    
+    @IBAction func song1(_ sender: Any) {
+        playSong(song: 1)
     }
-  }
-  
-  
-  @IBOutlet weak var congratulationsMessage: UILabel!
-  
-  
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-    congratulationsMessage.isHidden = true
-    let url = Bundle.main.url(forResource: "eye_exercise", withExtension: "mp3")!
-    do {
-      player = try AVAudioPlayer(contentsOf: url)
-      guard let player = player else { return }
-      player.delegate = self
-      player.prepareToPlay()
-    } catch let error as NSError {
-      print(error.description)
+    
+    @IBAction func song2(_ sender: Any) {
+        playSong(song: 2)
     }
-  }
+    @IBAction func song3(_ sender: Any) {
+        playSong(song: 3)
+    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        if isPlaying {
+//            player?.pause()
+//            isPlaying = false
+//        } else {
+//            player?.play()
+//            isPlaying = true
+//        }
+//    }
+    
+    
+    @IBOutlet weak var congratulationsMessage: UILabel!
+    
+    func playSong(song: Int) {
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-
-  func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-    congratulationsMessage.isHidden = false
-  }
-
+        if isPlaying {
+            player?.pause()
+            isPlaying = false
+        } else {
+            let url = Bundle.main.url(forResource: "眼保健操\(song)", withExtension: "mp3")!
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                player.delegate = self
+                player.prepareToPlay()
+            } catch let error as NSError {
+                print(error.description)
+            }
+            player?.play()
+            isPlaying = true
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        UIApplication.shared.isIdleTimerDisabled = true
+        // Do any additional setup after loading the view, typically from a nib.
+        congratulationsMessage.isHidden = true
+        
+    }
+    
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        congratulationsMessage.isHidden = false
+    }
+    
 }
 

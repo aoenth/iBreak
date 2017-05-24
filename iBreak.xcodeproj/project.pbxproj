@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A3500041ED6186900AC2B3C /* 眼保健操1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A3500011ED6186900AC2B3C /* 眼保健操1.mp3 */; };
+		0A3500051ED6186900AC2B3C /* 眼保健操2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A3500021ED6186900AC2B3C /* 眼保健操2.mp3 */; };
+		0A3500061ED6186900AC2B3C /* 眼保健操3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0A3500031ED6186900AC2B3C /* 眼保健操3.mp3 */; };
 		7B1E8DD21DA8BA57000458D6 /* glassSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B1E8DD11DA8BA57000458D6 /* glassSound.mp3 */; };
 		7BB02AE61DA88EB3009A743A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB02AE51DA88EB3009A743A /* AppDelegate.swift */; };
 		7BB02AE81DA88EB3009A743A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB02AE71DA88EB3009A743A /* FirstViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A3500011ED6186900AC2B3C /* 眼保健操1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "眼保健操1.mp3"; sourceTree = "<group>"; };
+		0A3500021ED6186900AC2B3C /* 眼保健操2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "眼保健操2.mp3"; sourceTree = "<group>"; };
+		0A3500031ED6186900AC2B3C /* 眼保健操3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "眼保健操3.mp3"; sourceTree = "<group>"; };
 		7B1E8DD11DA8BA57000458D6 /* glassSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = glassSound.mp3; sourceTree = "<group>"; };
 		7BB02AE21DA88EB3009A743A /* iBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BB02AE51DA88EB3009A743A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +117,9 @@
 		7BB02AFC1DA897B8009A743A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0A3500011ED6186900AC2B3C /* 眼保健操1.mp3 */,
+				0A3500021ED6186900AC2B3C /* 眼保健操2.mp3 */,
+				0A3500031ED6186900AC2B3C /* 眼保健操3.mp3 */,
 				7B1E8DD11DA8BA57000458D6 /* glassSound.mp3 */,
 				7BB02AFD1DA89899009A743A /* eye_exercise.mp3 */,
 			);
@@ -178,8 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B1E8DD21DA8BA57000458D6 /* glassSound.mp3 in Resources */,
+				0A3500051ED6186900AC2B3C /* 眼保健操2.mp3 in Resources */,
+				0A3500041ED6186900AC2B3C /* 眼保健操1.mp3 in Resources */,
 				7BB02AF21DA88EB3009A743A /* LaunchScreen.storyboard in Resources */,
 				7BB02AFE1DA89899009A743A /* eye_exercise.mp3 in Resources */,
+				0A3500061ED6186900AC2B3C /* 眼保健操3.mp3 in Resources */,
 				7BB02AEF1DA88EB3009A743A /* Assets.xcassets in Resources */,
 				7BB02AED1DA88EB3009A743A /* Main.storyboard in Resources */,
 			);
