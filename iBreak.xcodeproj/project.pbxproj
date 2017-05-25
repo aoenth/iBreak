@@ -17,7 +17,6 @@
 		7BB02AED1DA88EB3009A743A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB02AEB1DA88EB3009A743A /* Main.storyboard */; };
 		7BB02AEF1DA88EB3009A743A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BB02AEE1DA88EB3009A743A /* Assets.xcassets */; };
 		7BB02AF21DA88EB3009A743A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BB02AF01DA88EB3009A743A /* LaunchScreen.storyboard */; };
-		7BB02AFE1DA89899009A743A /* eye_exercise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7BB02AFD1DA89899009A743A /* eye_exercise.mp3 */; };
 		7BB02B001DA8A457009A743A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB02AFF1DA8A457009A743A /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +33,6 @@
 		7BB02AEE1DA88EB3009A743A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BB02AF11DA88EB3009A743A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BB02AF31DA88EB3009A743A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7BB02AFD1DA89899009A743A /* eye_exercise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = eye_exercise.mp3; sourceTree = "<group>"; };
 		7BB02AFF1DA8A457009A743A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -121,7 +119,6 @@
 				0A3500021ED6186900AC2B3C /* 眼保健操2.mp3 */,
 				0A3500031ED6186900AC2B3C /* 眼保健操3.mp3 */,
 				7B1E8DD11DA8BA57000458D6 /* glassSound.mp3 */,
-				7BB02AFD1DA89899009A743A /* eye_exercise.mp3 */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -190,7 +187,6 @@
 				0A3500051ED6186900AC2B3C /* 眼保健操2.mp3 in Resources */,
 				0A3500041ED6186900AC2B3C /* 眼保健操1.mp3 in Resources */,
 				7BB02AF21DA88EB3009A743A /* LaunchScreen.storyboard in Resources */,
-				7BB02AFE1DA89899009A743A /* eye_exercise.mp3 in Resources */,
 				0A3500061ED6186900AC2B3C /* 眼保健操3.mp3 in Resources */,
 				7BB02AEF1DA88EB3009A743A /* Assets.xcassets in Resources */,
 				7BB02AED1DA88EB3009A743A /* Main.storyboard in Resources */,
