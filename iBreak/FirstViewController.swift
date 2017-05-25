@@ -11,6 +11,7 @@ import AVFoundation
 
 var player: AVAudioPlayer?
 var isPlaying = false
+var songNumber = ""
 
 
 class FirstViewController: UIViewController, AVAudioPlayerDelegate {
@@ -39,7 +40,7 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var congratulationsMessage: UILabel!
     
     func playSong(song: Int) {
-
+        songNumber = "\(song)"
         if isPlaying {
             player?.pause()
             isPlaying = false
@@ -56,18 +57,21 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate {
             player?.play()
             isPlaying = true
         }
+        updateLabel()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.shared.isIdleTimerDisabled = true
-        // Do any additional setup after loading the view, typically from a nib.
-        congratulationsMessage.isHidden = true
-        
+
+    }
+    
+    func updateLabel() {
+        congratulationsMessage.text = isPlaying ? "正在播放眼保健操\(songNumber)" : "已停止"
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        congratulationsMessage.isHidden = false
+        congratulationsMessage.text = "视力被保护!"
     }
     
 }
