@@ -47,27 +47,17 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dhp-U0-38U">
-                                        <rect key="frame" x="33" y="298.5" width="150" height="30"/>
+                                        <rect key="frame" x="74.5" y="298.5" width="67" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VfP-to-F1e">
-                                                <rect key="frame" x="0.0" y="0.5" width="30" height="30"/>
-                                                <state key="normal" image="first"/>
-                                                <connections>
-                                                    <action selector="song1:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Qc1-bh-woW"/>
-                                                </connections>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1o-5I-QWl">
-                                                <rect key="frame" x="60" y="0.5" width="30" height="30"/>
-                                                <state key="normal" image="first"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
+                                                <size key="titleShadowOffset" width="5" height="5"/>
+                                                <state key="normal" title="开始" image="first">
+                                                    <color key="titleColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
+                                                    <action selector="beginPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="uWD-0D-8GY"/>
                                                     <action selector="song2:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hG0-W2-wdV"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnc-Jo-EUC">
-                                                <rect key="frame" x="120" y="0.5" width="30" height="30"/>
-                                                <state key="normal" image="first"/>
-                                                <connections>
-                                                    <action selector="song3:" destination="9pv-A4-QxB" eventType="touchUpInside" id="eiL-3C-zV2"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -86,6 +76,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="眼保健操" image="first" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="beginBtn" destination="o1o-5I-QWl" id="IYI-Fb-VKb"/>
                         <outlet property="congratulationsMessage" destination="KQZ-1w-vlD" id="kKi-6y-AAa"/>
                     </connections>
                 </viewController>

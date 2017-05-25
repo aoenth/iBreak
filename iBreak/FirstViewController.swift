@@ -11,21 +11,16 @@ import AVFoundation
 
 var player: AVAudioPlayer?
 var isPlaying = false
-var songNumber = ""
+var songNumber: Int!
 
 
 class FirstViewController: UIViewController, AVAudioPlayerDelegate {
-    
-    @IBAction func song1(_ sender: Any) {
-        playSong(song: 1)
+    @IBOutlet weak var beginBtn: UIButton!
+    @IBAction func beginPressed(_ sender: Any) {
+        playSong()
     }
     
-    @IBAction func song2(_ sender: Any) {
-        playSong(song: 2)
-    }
-    @IBAction func song3(_ sender: Any) {
-        playSong(song: 3)
-    }
+
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 //        if isPlaying {
 //            player?.pause()
@@ -39,13 +34,13 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var congratulationsMessage: UILabel!
     
-    func playSong(song: Int) {
-        songNumber = "\(song)"
+    func playSong() {
+        songNumber = Int(arc4random_uniform(3) + 1)
         if isPlaying {
             player?.pause()
             isPlaying = false
         } else {
-            let url = Bundle.main.url(forResource: "眼保健操\(song)", withExtension: "mp3")!
+            let url = Bundle.main.url(forResource: "眼保健操\(songNumber)", withExtension: "mp3")!
             do {
                 player = try AVAudioPlayer(contentsOf: url)
                 guard let player = player else { return }
@@ -67,7 +62,7 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func updateLabel() {
-        congratulationsMessage.text = isPlaying ? "正在播放眼保健操\(songNumber)" : "已停止"
+        beginBtn.setTitle(isPlaying ? "正在播放眼保健操\(songNumber)" : "已停止", for: UIControlState.normal)
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
