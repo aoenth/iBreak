@@ -32,15 +32,13 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate {
 //    }
     
     
-    @IBOutlet weak var congratulationsMessage: UILabel!
-    
     func playSong() {
         songNumber = Int(arc4random_uniform(3) + 1)
         if isPlaying {
             player?.pause()
             isPlaying = false
         } else {
-            let url = Bundle.main.url(forResource: "眼保健操\(songNumber)", withExtension: "mp3")!
+            let url = Bundle.main.url(forResource: "眼保健操\(songNumber!)", withExtension: "mp3")!
             do {
                 player = try AVAudioPlayer(contentsOf: url)
                 guard let player = player else { return }
@@ -62,11 +60,11 @@ class FirstViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     func updateLabel() {
-        beginBtn.setTitle(isPlaying ? "正在播放眼保健操\(songNumber)" : "已停止", for: UIControlState.normal)
+        beginBtn.setTitle(isPlaying ? "正在播放眼保健操\(songNumber!)" : "已停止", for: UIControlState.normal)
     }
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        congratulationsMessage.text = "视力被保护!"
+        beginBtn.setTitle(isPlaying ? "视力被保护!" : "已停止", for: UIControlState.normal)
     }
     
 }
